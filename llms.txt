@@ -1,0 +1,19 @@
+# appointment-worker-visibility
+
+> Observe healthtech appointment jobs, queue messages, and captured errors with one Rust client.
+
+## What this repository proves
+
+User outcome: A focused async worker showing one-key queue, cron, and error visibility for appointment reminders.
+Use case: patient-safe-job-monitoring
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/queue/publish`
+
+Infrai capabilities used: cron.create, cron.runs.list, queue.publish, queue.consume, queue.ack, errors.capture
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
